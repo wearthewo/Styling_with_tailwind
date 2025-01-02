@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Olympiacos</title>
+  </head>
+  <body class="bg-red-600">
+    <div>
+      <div>
+        <h1 class="text-center text-xl font-bold">Olympiacos FC</h1>
+        <div class="flex justify-end px-2">
+          <i id="hamburger" class="fa-solid fa-bars hover:cursor-pointer"></i>
+        </div>
+        <!-- Mobile nav -->
+        <div
+          id="mobileMenu"
+          class="hidden flex flex-col border-b-[1px] border-gray-800 text-center text-white bg-black px-4 py-2"
+        >
+          <a href="#" class="text-sm p-6 hover:underline">Ομάδα</a>
+          <a href="#" class="text-sm p-6 hover:underline">Νέα</a>
+          <a href="#" class="text-sm p-6 hover:underline">Βαθμολογίες</a>
+          <a href="#" class="text-sm p-6 hover:underline">Ακαδημία</a>
+          <a href="#" class="text-sm p-6 hover:underline">Εγκαταστάσεις</a>
+          <a href="#" class="text-sm p-6 hover:underline">Εισητήρια</a>
+        </div>
+      </div>
+      <div>
+        <div>
+          <div class="h-20 p-4 border-b-[1px] border-gray-800">
+            <ul class="hidden md:flex space-x-16 justify-center">
+              <li class="hover:cursor-pointer">Ομάδα</li>
+              <li class="hover:cursor-pointer">Νέα</li>
+              <li class="hover:cursor-pointer">Βαθμολογίες</li>
+              <li class="hover:cursor-pointer">Ακαδημία</li>
+              <li class="hover:cursor-pointer">Εγκαταστάσεις</li>
+              <li class="hover:cursor-pointer">Εισητήρια</li>
+            </ul>
+            <div class="static h-32 w-32">
+              <div class="absolute left-0 top-0 h-16 w-16">
+                <a target="_blank" href="https://www.olympiacos.org/">
+                  <img src="./static/Olympiacos_100_years_logo.png" alt="..." />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bg-indigo-300">
+      <img
+        class="object-cover h-auto w-full"
+        src="./static/Anakoinosi-red-white-copy.jpg"
+        alt="..."
+      />
+    </div>
+    <form class="w-full max-w-sm mx-auto mt-4">
+      <div class="md:flex md:items-center mb-6">
+        <div class="md:w-1/3">
+          <label
+            class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4"
+            for="inline-full-name"
+          >
+            Full Name
+          </label>
+        </div>
+        <div class="md:w-2/3">
+          <input
+            class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
+            id="inline-full-name"
+            type="text"
+            value="Συμπλήρωσε το ονομ/νυμο "
+          />
+        </div>
+      </div>
+      <div class="md:flex md:items-center mb-6">
+        <div class="md:w-1/3">
+          <label
+            class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4"
+            for="inline-password"
+          >
+            Password
+          </label>
+        </div>
+        <div class="md:w-2/3">
+          <input
+            class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
+            id="inline-password"
+            type="password"
+            placeholder="******************"
+          />
+        </div>
+      </div>
+      <div class="md:flex md:items-center mb-6">
+        <div class="md:w-1/3"></div>
+        <label class="md:w-2/3 block text-gray-500 font-bold">
+          <input class="mr-2 leading-tight" type="checkbox" />
+          <span class="text-sm"> Στείλε μου όλα τα τελευταία νέα! </span>
+        </label>
+      </div>
+      <div class="md:flex md:items-center">
+        <div class="md:w-1/3"></div>
+        <div class="md:w-2/3">
+          <button
+            class="shadow bg-emerald-500 hover:bg-emerald-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded"
+            type="button"
+          >
+            Εγγραφή
+          </button>
+        </div>
+      </div>
+    </form>
+  </body>
+  <script>
+    const hamburger = document.getElementById("hamburger");
+    const mobileMenu = document.getElementById("mobileMenu");
+    hamburger.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  </script>
+</html>
